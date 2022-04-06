@@ -20,9 +20,9 @@ export default function Home(props) {
      return(
           <>
           <Head>
-          <meta charset="UTF-8"/>
-          <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+          <meta name="description" content="storefront online running shoes with free shipping"/>
+          <meta name="keywords" content="Shoes, Runing, Running Shoes, Nike Shoes, New Balance Shoes"/>
            <title>Storefront</title>
           </Head>
            <PageTitle tagline="product specials" title="Storefront"/>
@@ -34,13 +34,10 @@ export default function Home(props) {
 }
 
 
-/* 
-   getStaticProps  =======>   server Node.js
-*/
+ 
 
 export async function getStaticProps(){
-    // node.js code ... web apis filesystem read writes fetch
-    // nextjs  five top level fetch api....
+  
     const res = await fetch('https://shoeshine8k-default-rtdb.firebaseio.com/products.json')
     const productData = await res.json();
     const products = Object.values(productData)
@@ -48,7 +45,7 @@ export async function getStaticProps(){
       props:{
            products
       },
-      revalidate:60
+      revalidate: 60,
  }
 }
 
