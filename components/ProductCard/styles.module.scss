@@ -1,6 +1,6 @@
  .productCard{
-      max-width: 420px;
-      width:100%;
+      
+      
       margin: 2rem auto 4rem;
  
     footer{
@@ -39,7 +39,6 @@
   
  @media (min-width:600px){
     .productCard{
-        max-width: 360px;
         display:flex;
         flex-direction: column;
         justify-content: space-between;
