@@ -1,5 +1,6 @@
  .productCard{
     max-width: 420px;
+    min-width: 360px;
     margin: 2rem auto 0;
     footer{
         margin: 1rem 0;
@@ -12,9 +13,7 @@
         border-radius: 3px;
         font-size:1.25rem;
     }
-    img{
-        width:100%;
-    }
+    
  }
 
  .price{
@@ -35,3 +34,32 @@
      font-weight: 800;
      color:#1e293b;
  }
+
+  
+ @media (min-width:600px){
+    .productCard{
+        max-width: 280px;
+        min-width: 200px;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .price{
+        font-size:1.75rem;
+        font-weight: 200;
+        color:#64748b;
+        margin: 0.25rem 0;
+      }
+     
+      .description{
+         font-size: 14px;
+         color:#94a3b8;
+     
+      }
+     
+      .name{
+          font-size: 1.75rem;
+          font-weight: 800;
+          color:#1e293b;
+      }
+}

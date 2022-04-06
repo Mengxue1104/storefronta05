@@ -2,17 +2,25 @@ import React from 'react';
 import Image from 'next/image'
 import {productCard, price, name, description} from './styles.module.scss'
 
+
+const myLoader = ({ src, width, quality }) => {
+  return `${src}?w=${width}&q=${quality || 75}`
+}
+
+
 function ProductCard ({children, product, ...props})  {
   const {productName, productPrice, productDescription, imageUrl, uid}= {...product}
   return (
        <aside className={productCard}>
          <header>
            <Image
+              loader={myLoader}
               src={imageUrl}
               alt={productName}
               width={418}
               height={240}
               quality={50}
+              layout="intrinsic"
            />
         
          </header>

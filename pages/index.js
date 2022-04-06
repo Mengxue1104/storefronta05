@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import PageTitle from "../components/PageTitle/PageTitle";
 import ProductCard from "../components/ProductCard/ProductCard";
-
+import {pane} from "./../styles/home.module.scss"
 
 // https://shoeshine8k-default-rtdb.firebaseio.com/products.json
 /* 
@@ -26,7 +26,7 @@ export default function Home(props) {
            <title>Storefront</title>
           </Head>
            <PageTitle tagline="product specials" title="Storefront"/>
-           <main>
+           <main className={pane}>
                {  products.map(product=> <ProductCard  key={product.uid} product={product}/>)}
            </main>
           </>
