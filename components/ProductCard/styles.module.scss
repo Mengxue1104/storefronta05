@@ -1,7 +1,8 @@
  .productCard{
-    max-width: 420px;
-    min-width: 360px;
-    margin: 2rem auto 0;
+      max-width: 420px;
+      width:100%;
+      margin: 2rem auto 4rem;
+ 
     footer{
         margin: 1rem 0;
     }
@@ -38,11 +39,11 @@
   
  @media (min-width:600px){
     .productCard{
-        max-width: 280px;
-        min-width: 200px;
+        max-width: 360px;
         display:flex;
         flex-direction: column;
         justify-content: space-between;
+        margin: 0;
     }
     .price{
         font-size:1.75rem;

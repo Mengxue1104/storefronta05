@@ -13,7 +13,7 @@ import {pane} from "./../styles/home.module.scss"
  
 export default function Home(props) {
 
-    const products = props.products;
+    const products = props.products.slice(0,3);
    
 
 

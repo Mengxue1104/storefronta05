@@ -1,16 +1,15 @@
 .pane{
-    width: 100%;
+  width: 80%;
+  margin: 0 auto;
  
 }
 
 
 @media (min-width:600px){
     .pane{
-       display:flex;
-       flex-wrap:wrap;
-       flex:1;
-       gap: 2rem;
-       max-width: 95%;
-       margin: 2rem auto;
+      margin: 4rem auto 0;
+      display:flex;
+      gap: 6rem;
+      justify-content: center;
     }
 }
