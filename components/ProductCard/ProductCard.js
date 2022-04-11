@@ -8,7 +8,7 @@ const myLoader = ({ src, width, quality }) => {
 }
 
 
-function ProductCard ({children, product, ...props})  {
+function ProductCard ({children, product, checkoutRequest, ...props})  {
   const {productName, productPrice, productDescription, imageUrl, uid}= {...product}
   return (
        <aside className={productCard}>
@@ -28,7 +28,7 @@ function ProductCard ({children, product, ...props})  {
           <p className={price}>${productPrice}</p>
           <p className={description}>{productDescription}</p>
           <footer>
-            <form action="#" method="POST">
+            <form action="/api/test" method="POST">
               <input type="hidden" name="uid" value={uid}/>
               <button type="submit">Buy Now</button>
             </form>

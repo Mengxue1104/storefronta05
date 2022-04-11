@@ -3,13 +3,7 @@ import PageTitle from "../components/PageTitle/PageTitle";
 import ProductCard from "../components/ProductCard/ProductCard";
 import {pane} from "./../styles/home.module.scss"
 
-// https://shoeshine8k-default-rtdb.firebaseio.com/products.json
-/* 
-          SSG Static Site Generation
-          content
-          data + comp ======> html+css-----------------> edge/CDN
-
-*/
+ 
  
 export default function Home(props) {
 
@@ -27,7 +21,7 @@ export default function Home(props) {
           </Head>
            <PageTitle tagline="product specials" title="Storefront"/>
            <main className={pane}>
-               {  products.map(product=> <ProductCard  key={product.uid} product={product}/>)}
+               {  products.map(product=> <ProductCard  key={product.uid}   product={product}/>)}
            </main>
           </>
      )
